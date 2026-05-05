@@ -1,0 +1,30 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        
+        // 1. Ler o valor total
+        int valor = sc.nextInt();
+        int atual = valor;
+        
+        // 2. Definir as notas disponíveis
+        int[] notas = {100, 50, 20, 10, 5, 2, 1};
+        
+        System.out.println(valor);
+        
+        // 3. Processar cada nota
+        for (int i = 0; i < notas.length; i++) {
+            int quantidadeNotas = atual / notas[i];
+            
+            System.out.println(quantidadeNotas + " nota(s) de R$ " + notas[i] + ",00");
+            
+            // Atualizar o valor restante com o que sobrou
+            atual %= notas[i];
+        }
+        
+        sc.close();
+    }
+}
