@@ -1,0 +1,23 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        
+        // 1. Ler o valor do raio (raio pode ter casas decimais)
+        double raio = sc.nextDouble();
+        
+        // 2. Definir o valor de n (pi) conforme o enunciado
+        double n = 3.14159;
+        
+        // 3. Calcular a área: n multiplicado pelo raio ao quadrado
+        double area = n * Math.pow(raio, 2);
+        
+        // 4. Imprimir o resultado com 4 casas decimais e sem espaços em volta do "="
+        System.out.printf("A=%.4f\n", area);
+        
+        sc.close();
+    }
+}
