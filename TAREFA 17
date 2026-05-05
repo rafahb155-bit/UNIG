@@ -1,0 +1,27 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        
+        // 1. Ler o nome do vendedor (não será usado no cálculo)
+        String nome = sc.next();
+        
+        // 2. Ler o salário fixo e o montante total de vendas
+        double salarioFixo = sc.nextDouble();
+        double totalVendas = sc.nextDouble();
+        
+        // 3. Calcular a comissão (15% das vendas)
+        double comissao = totalVendas * 0.15;
+        
+        // 4. Calcular o salário total
+        double salarioTotal = salarioFixo + comissao;
+        
+        // 5. Imprimir o resultado com 2 casas decimais e o prefixo R$
+        System.out.printf("TOTAL = R$ %.2f\n", salarioTotal);
+        
+        sc.close();
+    }
+}
