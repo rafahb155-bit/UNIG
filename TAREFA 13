@@ -1,0 +1,25 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        
+        // 1. Ler os três valores de entrada
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        
+        // 2. Aplicar a fórmula entre 'a' e 'b' para encontrar o maior entre eles
+        int maiorAB = (a + b + Math.abs(a - b)) / 2;
+        
+        // 3. Aplicar a fórmula novamente entre o resultado anterior e 'c' para achar o maior dos três
+        int maiorFinal = (maiorAB + c + Math.abs(maiorAB - c)) / 2;
+        
+        // 4. Imprimir o resultado com o espaçamento e mensagem corretos
+        System.out.println(maiorFinal + " eh o maior");
+        
+        sc.close();
+    }
+}
