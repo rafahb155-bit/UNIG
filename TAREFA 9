@@ -1,0 +1,22 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        
+        // 1. Ler a distância desejada (em Km)
+        int distancia = sc.nextInt();
+        
+        // 2. Calcular o tempo
+        // O enunciado diz: o carro Y se afasta 1 Km a cada 2 minutos.
+        // Logo, o tempo é o dobro da distância.
+        int tempo = distancia * 2;
+        
+        // 3. Imprimir o resultado seguido de " minutos"
+        System.out.println(tempo + " minutos");
+        
+        sc.close();
+    }
+}
