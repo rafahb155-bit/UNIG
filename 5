@@ -1,0 +1,21 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        
+        // 1. Ler as variáveis A e B
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+        
+        // 2. Efetuar a soma
+        int X = A + B;
+        
+        // 3. Imprimir o resultado com o espaçamento e formato corretos
+        System.out.println("X = " + X);
+        
+        sc.close();
+    }
+}
