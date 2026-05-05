@@ -1,0 +1,24 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        
+        // 1. Ler o valor do raio da esfera
+        double raio = sc.nextDouble();
+        
+        // 2. Definir o valor de PI conforme o enunciado
+        double PI = 3.14159;
+        
+        // 3. Calcular o volume
+        // Usamos 4.0/3.0 para evitar a divisão inteira
+        double volume = (4.0 / 3.0) * PI * Math.pow(raio, 3);
+        
+        // 4. Imprimir o resultado com o espaçamento e formato exigidos
+        System.out.printf("VOLUME = %.3f\n", volume);
+        
+        sc.close();
+    }
+}
