@@ -1,0 +1,25 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        
+        // 1. Ler as coordenadas do primeiro ponto (x1, y1)
+        double x1 = sc.nextDouble();
+        double y1 = sc.nextDouble();
+        
+        // 2. Ler as coordenadas do segundo ponto (x2, y2)
+        double x2 = sc.nextDouble();
+        double y2 = sc.nextDouble();
+        
+        // 3. Aplicar a fórmula da distância
+        double distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        
+        // 4. Imprimir o resultado formatado com 4 casas decimais
+        System.out.printf("%.4f\n", distancia);
+        
+        sc.close();
+    }
+}
