@@ -1,0 +1,23 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        
+        // 1. Ler os quatro valores inteiros
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+        int C = sc.nextInt();
+        int D = sc.nextInt();
+        
+        // 2. Calcular a diferença conforme a fórmula
+        int diferenca = (A * B - C * D);
+        
+        // 3. Imprimir o resultado com as letras maiúsculas e o espaçamento correto
+        System.out.println("DIFERENCA = " + diferenca);
+        
+        sc.close();
+    }
+}
