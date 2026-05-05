@@ -1,0 +1,25 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        
+        // 1. Ler os valores de entrada
+        double tempoGasto = sc.nextDouble();
+        double velocidadeMedia = sc.nextDouble();
+        
+        // 2. Calcular a distância percorrida (Distância = Velocidade * Tempo)
+        double distancia = tempoGasto * velocidadeMedia;
+        
+        // 3. Calcular o consumo em litros
+        // O automóvel faz 12 km por litro, então dividimos a distância por 12.
+        double litrosNecessarios = distancia / 12.0;
+        
+        // 4. Imprimir o resultado com exatamente 3 casas decimais
+        System.out.printf("%.3f\n", litrosNecessarios);
+        
+        sc.close();
+    }
+}
