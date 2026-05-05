@@ -1,0 +1,29 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        
+        // 1. Ler o total de dias
+        int idadeEmDias = sc.nextInt();
+        
+        // 2. Calcular os anos (considerando 365 dias)
+        int anos = idadeEmDias / 365;
+        int restoDias = idadeEmDias % 365;
+        
+        // 3. Calcular os meses (considerando 30 dias sobre o que sobrou)
+        int meses = restoDias / 30;
+        
+        // 4. O que sobrou são os dias finais
+        int dias = restoDias % 30;
+        
+        // 5. Imprimir no formato exato exigido
+        System.out.println(anos + " ano(s)");
+        System.out.println(meses + " mes(es)");
+        System.out.println(dias + " dia(s)");
+        
+        sc.close();
+    }
+}
